@@ -144,6 +144,7 @@ Mute.Size = UDim2.new(0, 50, 0, 50)
 Mute.Font = Enum.Font.SourceSans
 Mute.TextColor3 = Color3.fromRGB(164, 154, 230)
 Mute.TextSize = 14.000
+Mute.Text = "Mute"
 
 Unmute.Name = "Unmute"
 Unmute.Parent = FillerBody
@@ -154,6 +155,7 @@ Unmute.Size = UDim2.new(0, 50, 0, 50)
 Unmute.Font = Enum.Font.SourceSans
 Unmute.TextColor3 = Color3.fromRGB(164, 154, 230)
 Unmute.TextSize = 14.000
+Unmute.Text = "Unmute"
 
 TimeStamp.Name = "TimeStamp"
 TimeStamp.Parent = FillerBody
