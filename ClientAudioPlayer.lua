@@ -428,14 +428,12 @@ local function TVUIJRV_fake_script() -- PauseButton.Pauser
 	end)
 end
 coroutine.wrap(TVUIJRV_fake_script)()
-local function CCJTS_fake_script() -- PlayButton.Player 
-	local script = Instance.new('LocalScript', PlayButton)
+PlayButton.MouseButton1Down:Connect(function()
+	ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
+	ClientAudio:Resume()
+	AudioId.Text = ""
+end)
 
-	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.ClientAudio:Resume()
-	end)
-end
-coroutine.wrap(CCJTS_fake_script)()
 local function RGGMD_fake_script() -- Mute.LocalScript 
 	local script = Instance.new('LocalScript', Mute)
 
@@ -536,9 +534,11 @@ local function OTKCSZ_fake_script() -- Minimizer.Minimize
 	end)
 end
 coroutine.wrap(OTKCSZ_fake_script)()
+--[[
 while true do
 	pcall(function()
 		ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
 	end)
 	wait()
 end
+]]--
