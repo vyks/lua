@@ -48,6 +48,7 @@ local Minimizer = Instance.new("TextButton")
 local MyProfile = Instance.new("ImageLabel")
 local UICorner_2 = Instance.new("UICorner")
 local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
@@ -374,6 +375,9 @@ Minimizer.Font = Enum.Font.SourceSans
 Minimizer.Text = ""
 Minimizer.TextColor3 = Color3.fromRGB(0, 0, 0)
 Minimizer.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0, 100)
+UICorner_4.Parent = Minimizer
 
 MyProfile.Name = "MyProfile"
 MyProfile.Parent = Body
