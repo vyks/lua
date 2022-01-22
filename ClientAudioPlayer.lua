@@ -391,9 +391,7 @@ MyProfile.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
 UICorner_2.CornerRadius = UDim.new(0, 100)
 UICorner_2.Parent = MyProfile
-
 UICorner_3.Parent = Body
-
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local userId = player.UserId	
@@ -410,7 +408,6 @@ ClientAudio.Pitch = 1
 ClientAudio.Volume = 1 
 ClientAudio.Looped = true 
 ClientAudio.Name = "ClientAudio"
-ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
 
 game.StarterGui:SetCore('SendNotification',
 	{
@@ -431,7 +428,6 @@ end
 coroutine.wrap(TVUIJRV_fake_script)()
 PlayButton.MouseButton1Down:Connect(function()
 	ClientAudio:Resume()
-	AudioId.Text = ""
 end)
 
 local function RGGMD_fake_script() -- Mute.LocalScript 
@@ -534,11 +530,9 @@ local function OTKCSZ_fake_script() -- Minimizer.Minimize
 	end)
 end
 coroutine.wrap(OTKCSZ_fake_script)()
---[[
 while true do
 	pcall(function()
 		ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
 	end)
 	wait()
 end
-]]--
