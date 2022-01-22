@@ -49,14 +49,10 @@ local MyProfile = Instance.new("ImageLabel")
 local UICorner_2 = Instance.new("UICorner")
 local UICorner_3 = Instance.new("UICorner")
 local UICorner_4 = Instance.new("UICorner")
-
---Properties:
-
 ClientPlayerUI.Name = "ClientPlayerUI"
 ClientPlayerUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ClientPlayerUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ClientPlayerUI.ResetOnSpawn = false
-
 Body.Name = "Body"
 Body.Parent = ClientPlayerUI
 Body.AnchorPoint = Vector2.new(0, 1)
@@ -65,7 +61,6 @@ Body.Position = UDim2.new(0.0101010101, 0, 0.983532965, 0)
 Body.Size = UDim2.new(0, 235, 0, 290)
 Body.Active = true
 Body.Draggable = true
-
 FillerBody.Name = "FillerBody"
 FillerBody.Parent = Body
 FillerBody.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -73,7 +68,6 @@ FillerBody.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 FillerBody.ClipsDescendants = true
 FillerBody.Position = UDim2.new(0.5, 0, 0.5, 0)
 FillerBody.Size = UDim2.new(0, 235, 0, 290)
-
 AudioId.Name = "AudioId"
 AudioId.Parent = FillerBody
 AudioId.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -86,9 +80,7 @@ AudioId.PlaceholderText = "Audio ID Here"
 AudioId.Text = ""
 AudioId.TextColor3 = Color3.fromRGB(164, 154, 230)
 AudioId.TextSize = 20.000
-
 UICorner.Parent = FillerBody
-
 PauseButton.Name = "PauseButton"
 PauseButton.Parent = FillerBody
 PauseButton.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -99,7 +91,6 @@ PauseButton.Font = Enum.Font.SourceSans
 PauseButton.Text = "Pause"
 PauseButton.TextColor3 = Color3.fromRGB(164, 154, 230)
 PauseButton.TextSize = 20.000
-
 PlayButton.Name = "PlayButton"
 PlayButton.Parent = FillerBody
 PlayButton.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -110,7 +101,6 @@ PlayButton.Font = Enum.Font.SourceSans
 PlayButton.Text = "Play"
 PlayButton.TextColor3 = Color3.fromRGB(164, 154, 230)
 PlayButton.TextSize = 20.000
-
 Miscellaneous.Name = "Miscellaneous"
 Miscellaneous.Parent = FillerBody
 Miscellaneous.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -122,7 +112,6 @@ Miscellaneous.Text = "Miscellaneous"
 Miscellaneous.TextColor3 = Color3.fromRGB(164, 154, 230)
 Miscellaneous.TextSize = 20.000
 Miscellaneous.TextYAlignment = Enum.TextYAlignment.Top
-
 MuteAudios.Name = "MuteAudios"
 MuteAudios.Parent = FillerBody
 MuteAudios.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
@@ -134,7 +123,6 @@ MuteAudios.Text = "Mute Audios"
 MuteAudios.TextColor3 = Color3.fromRGB(164, 154, 230)
 MuteAudios.TextSize = 16.000
 MuteAudios.TextYAlignment = Enum.TextYAlignment.Top
-
 Mute.Name = "Mute"
 Mute.Parent = FillerBody
 Mute.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -145,7 +133,6 @@ Mute.Font = Enum.Font.SourceSans
 Mute.TextColor3 = Color3.fromRGB(164, 154, 230)
 Mute.TextSize = 14.000
 Mute.Text = "Mute"
-
 Unmute.Name = "Unmute"
 Unmute.Parent = FillerBody
 Unmute.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -156,7 +143,6 @@ Unmute.Font = Enum.Font.SourceSans
 Unmute.TextColor3 = Color3.fromRGB(164, 154, 230)
 Unmute.TextSize = 14.000
 Unmute.Text = "Unmute"
-
 TimeStamp.Name = "TimeStamp"
 TimeStamp.Parent = FillerBody
 TimeStamp.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -167,7 +153,6 @@ TimeStamp.Font = Enum.Font.SourceSans
 TimeStamp.Text = "TIMESTAMPHERE"
 TimeStamp.TextColor3 = Color3.fromRGB(164, 154, 230)
 TimeStamp.TextSize = 15.000
-
 Destroy.Name = "Destroy"
 Destroy.Parent = FillerBody
 Destroy.BackgroundColor3 = Color3.fromRGB(44, 47, 51)
@@ -179,7 +164,6 @@ Destroy.Text = "Destroy"
 Destroy.TextColor3 = Color3.fromRGB(210, 60, 65)
 Destroy.TextSize = 15.000
 Destroy.TextWrapped = true
-
 Credits.Name = "Credits"
 Credits.Parent = FillerBody
 Credits.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
@@ -190,7 +174,6 @@ Credits.Font = Enum.Font.SourceSans
 Credits.Text = "Credits:"
 Credits.TextColor3 = Color3.fromRGB(164, 154, 230)
 Credits.TextSize = 14.000
-
 CreditsBody.Name = "CreditsBody"
 CreditsBody.Parent = FillerBody
 CreditsBody.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
@@ -204,145 +187,121 @@ CreditsBody.TextSize = 10.000
 CreditsBody.TextWrapped = true
 CreditsBody.TextXAlignment = Enum.TextXAlignment.Left
 CreditsBody.TextYAlignment = Enum.TextYAlignment.Top
-
 Visual.Name = "Visual"
 Visual.Parent = FillerBody
 Visual.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual.Position = UDim2.new(0.53191489, 0, 0.637931049, 0)
 Visual.Size = UDim2.new(0, 105, 0, 65)
-
 UIListLayout.Parent = Visual
 UIListLayout.FillDirection = Enum.FillDirection.Horizontal
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
-
 Visual1.Name = "Visual1"
 Visual1.Parent = Visual
 Visual1.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual1.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual1.Size = UDim2.new(0, 5, 0, 2)
-
 Visual2.Name = "Visual2"
 Visual2.Parent = Visual
 Visual2.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual2.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual2.Size = UDim2.new(0, 5, 0, 2)
-
 Visual3.Name = "Visual3"
 Visual3.Parent = Visual
 Visual3.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual3.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual3.Size = UDim2.new(0, 5, 0, 2)
-
 Visual4.Name = "Visual4"
 Visual4.Parent = Visual
 Visual4.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual4.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual4.Size = UDim2.new(0, 5, 0, 2)
-
 Visual5.Name = "Visual5"
 Visual5.Parent = Visual
 Visual5.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual5.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual5.Size = UDim2.new(0, 5, 0, 2)
-
 Visual6.Name = "Visual6"
 Visual6.Parent = Visual
 Visual6.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual6.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual6.Size = UDim2.new(0, 5, 0, 2)
-
 Visual7.Name = "Visual7"
 Visual7.Parent = Visual
 Visual7.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual7.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual7.Size = UDim2.new(0, 5, 0, 2)
-
 Visual8.Name = "Visual8"
 Visual8.Parent = Visual
 Visual8.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual8.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual8.Size = UDim2.new(0, 5, 0, 2)
-
 Visual9.Name = "Visual9"
 Visual9.Parent = Visual
 Visual9.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual9.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual9.Size = UDim2.new(0, 5, 0, 2)
-
 Visual10.Name = "Visual10"
 Visual10.Parent = Visual
 Visual10.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual10.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual10.Size = UDim2.new(0, 5, 0, 2)
-
 Visual11.Name = "Visual11"
 Visual11.Parent = Visual
 Visual11.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual11.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual11.Size = UDim2.new(0, 5, 0, 2)
-
 Visual12.Name = "Visual12"
 Visual12.Parent = Visual
 Visual12.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual12.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual12.Size = UDim2.new(0, 5, 0, 2)
-
 Visual13.Name = "Visual13"
 Visual13.Parent = Visual
 Visual13.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual13.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual13.Size = UDim2.new(0, 5, 0, 2)
-
 Visual14.Name = "Visual14"
 Visual14.Parent = Visual
 Visual14.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual14.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual14.Size = UDim2.new(0, 5, 0, 2)
-
 Visual15.Name = "Visual15"
 Visual15.Parent = Visual
 Visual15.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual15.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual15.Size = UDim2.new(0, 5, 0, 2)
-
 Visual16.Name = "Visual16"
 Visual16.Parent = Visual
 Visual16.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual16.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual16.Size = UDim2.new(0, 5, 0, 2)
-
 Visual17.Name = "Visual17"
 Visual17.Parent = Visual
 Visual17.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual17.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual17.Size = UDim2.new(0, 5, 0, 2)
-
 Visual18.Name = "Visual18"
 Visual18.Parent = Visual
 Visual18.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual18.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual18.Size = UDim2.new(0, 5, 0, 2)
-
 Visual19.Name = "Visual19"
 Visual19.Parent = Visual
 Visual19.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual19.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual19.Size = UDim2.new(0, 5, 0, 2)
-
 Visual20.Name = "Visual20"
 Visual20.Parent = Visual
 Visual20.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual20.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual20.Size = UDim2.new(0, 5, 0, 2)
-
 Visual21.Name = "Visual21"
 Visual21.Parent = Visual
 Visual21.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
 Visual21.BorderColor3 = Color3.fromRGB(164, 154, 230)
 Visual21.Size = UDim2.new(0, 5, 0, 2)
-
 Sensitivity.Name = "Sensitivity"
 Sensitivity.Parent = FillerBody
 Sensitivity.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
@@ -355,7 +314,6 @@ Sensitivity.PlaceholderText = "Vis Sense"
 Sensitivity.Text = ""
 Sensitivity.TextColor3 = Color3.fromRGB(164, 154, 230)
 Sensitivity.TextSize = 20.000
-
 SenseSet.Name = "SenseSet"
 SenseSet.Parent = FillerBody
 SenseSet.BackgroundColor3 = Color3.fromRGB(42, 45, 47)
@@ -366,7 +324,6 @@ SenseSet.Font = Enum.Font.SourceSans
 SenseSet.Text = "Set 0.1-0 / Auto 0.05"
 SenseSet.TextColor3 = Color3.fromRGB(164, 154, 230)
 SenseSet.TextSize = 14.000
-
 Minimizer.Name = "Minimizer"
 Minimizer.Parent = Body
 Minimizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -377,10 +334,8 @@ Minimizer.Font = Enum.Font.SourceSans
 Minimizer.Text = ""
 Minimizer.TextColor3 = Color3.fromRGB(0, 0, 0)
 Minimizer.TextSize = 14.000
-
 UICorner_4.CornerRadius = UDim.new(0, 100)
 UICorner_4.Parent = Minimizer
-
 MyProfile.Name = "MyProfile"
 MyProfile.Parent = Body
 MyProfile.BackgroundColor3 = Color3.fromRGB(164, 154, 230)
@@ -388,10 +343,10 @@ MyProfile.BackgroundTransparency = 0.500
 MyProfile.Position = UDim2.new(0, 5, 0, 5)
 MyProfile.Size = UDim2.new(0, 45, 0, 45)
 MyProfile.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
 UICorner_2.CornerRadius = UDim.new(0, 100)
 UICorner_2.Parent = MyProfile
 UICorner_3.Parent = Body
+
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local userId = player.UserId	
@@ -418,22 +373,43 @@ game.StarterGui:SetCore('SendNotification',
 )
 
 wait()
-local function TVUIJRV_fake_script() -- PauseButton.Pauser 
-	local script = Instance.new('LocalScript', PauseButton)
+_G.Muted = false
+_G.Paused = false
 
+local function Pauser() -- PauseButton.Pauser 
+	local script = Instance.new('LocalScript', PauseButton)
 	script.Parent.MouseButton1Down:Connect(function()
 		script.Parent.Parent.ClientAudio:Pause()
+        _G.Paused = true
+		script.Parent.Parent.PlayButton.Text = "Resume"
 	end)
 end
-coroutine.wrap(TVUIJRV_fake_script)()
+coroutine.wrap(Pauser)()
+
 PlayButton.MouseButton1Down:Connect(function()
-	ClientAudio:Resume()
+	if _G.Paused == true then
+		ClientAudio:Resume()
+		_G.Paused = false
+		PlayButton.Text = "Play"
+	elseif _G.Paused == false then
+		ClientAudio.TimePosition = 0
+		ClientAudio:Play()
+		PlayButton.Text = "Play"
+	end
+	repeat 
+		if AudioId.Text == "" then
+		ClientAudio.TimePosition = 0
+          	ClientAudio:Pause()
+            PlayButton.Text = "Play"
+		else
+			wait()
+		end
+		wait()
+	until AudioId.Text == "baba"
 end)
 
-local function RGGMD_fake_script() -- Mute.LocalScript 
+local function Muter() -- Mute.Muter 
 	local script = Instance.new('LocalScript', Mute)
-
-	_G.Muted = false
 	script.Parent.MouseButton1Down:Connect(function()
 		_G.Muted = true
 		print("muting")
@@ -447,19 +423,19 @@ local function RGGMD_fake_script() -- Mute.LocalScript
 		until _G.Muted == false
 	end)
 end
-coroutine.wrap(RGGMD_fake_script)()
-local function NCBG_fake_script() -- Unmute.LocalScript 
-	local script = Instance.new('LocalScript', Unmute)
+coroutine.wrap(Muter)()
 
+local function Unmuter() -- Unmute.Unmuter 
+	local script = Instance.new('LocalScript', Unmute)
 	script.Parent.MouseButton1Down:Connect(function()
 		_G.Muted = false
 		print("unmuted")
 	end)
 end
-coroutine.wrap(NCBG_fake_script)()
-local function ZFBRZZN_fake_script() -- TimeStamp.TimeStampDisplayer 
-	local script = Instance.new('LocalScript', TimeStamp)
+coroutine.wrap(Unmuter)()
 
+local function TimeStampDisplayer() -- TimeStamp.TimeStampDisplayer 
+	local script = Instance.new('LocalScript', TimeStamp)
 	function Format(Int)
 		return string.format("%02i", Int)
 	end
@@ -475,10 +451,10 @@ local function ZFBRZZN_fake_script() -- TimeStamp.TimeStampDisplayer
 		wait()
 	end
 end
-coroutine.wrap(ZFBRZZN_fake_script)()
-local function SZGDKJY_fake_script() -- Destroy.LocalScript 
-	local script = Instance.new('LocalScript', Destroy)
+coroutine.wrap(TimeStampDisplayer)()
 
+local function Destroyer() -- Destroy.Destroyer 
+	local script = Instance.new('LocalScript', Destroy)
 	script.Parent.MouseButton1Down:Connect(function()
 		game.StarterGui:SetCore('SendNotification',
 			{
@@ -490,10 +466,10 @@ local function SZGDKJY_fake_script() -- Destroy.LocalScript
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(SZGDKJY_fake_script)()
-local function QROCOAA_fake_script() -- Visual.Visualizer 
-	local script = Instance.new('LocalScript', Visual)
+coroutine.wrap(Destroyer)()
 
+local function Visualizer() -- Visual.Visualizer 
+	local script = Instance.new('LocalScript', Visual)
 	while true do
 		local success, err = pcall(function()
 			for i,g in pairs(script.Parent:GetChildren()) do
@@ -513,10 +489,10 @@ local function QROCOAA_fake_script() -- Visual.Visualizer
 		wait()
 	end
 end
-coroutine.wrap(QROCOAA_fake_script)()
-local function OTKCSZ_fake_script() -- Minimizer.Minimize 
-	local script = Instance.new('LocalScript', Minimizer)
+coroutine.wrap(Visualizer)()
 
+local function Minimize() -- Minimizer.Minimize 
+	local script = Instance.new('LocalScript', Minimizer)
 	local closed = false
 	script.Parent.MouseButton1Down:Connect(function()
 		if closed == false then closed = true
@@ -529,7 +505,8 @@ local function OTKCSZ_fake_script() -- Minimizer.Minimize
 		end
 	end)
 end
-coroutine.wrap(OTKCSZ_fake_script)()
+coroutine.wrap(Minimize)()
+
 while true do
 	pcall(function()
 		ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
