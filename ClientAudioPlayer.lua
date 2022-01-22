@@ -449,8 +449,8 @@ local function RGGMD_fake_script() -- Mute.LocalScript
 				end
 			end
 			wait(0.01)
-			print("muting")
 		until _G.Muted == false
+		print("muting")
 	end)
 end
 coroutine.wrap(RGGMD_fake_script)()
