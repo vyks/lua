@@ -436,6 +436,7 @@ local function RGGMD_fake_script() -- Mute.LocalScript
 	_G.Muted = false
 	script.Parent.MouseButton1Down:Connect(function()
 		_G.Muted = true
+		print("muting")
 		repeat
 			for i,v in pairs(workspace:GetDescendants()) do
 				if v:IsA("Sound") then
@@ -444,7 +445,6 @@ local function RGGMD_fake_script() -- Mute.LocalScript
 			end
 			wait(0.01)
 		until _G.Muted == false
-		print("muting")
 	end)
 end
 coroutine.wrap(RGGMD_fake_script)()
