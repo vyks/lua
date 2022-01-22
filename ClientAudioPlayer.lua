@@ -410,6 +410,7 @@ ClientAudio.Pitch = 1
 ClientAudio.Volume = 1 
 ClientAudio.Looped = true 
 ClientAudio.Name = "ClientAudio"
+ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
 
 game.StarterGui:SetCore('SendNotification',
 	{
@@ -429,7 +430,6 @@ local function TVUIJRV_fake_script() -- PauseButton.Pauser
 end
 coroutine.wrap(TVUIJRV_fake_script)()
 PlayButton.MouseButton1Down:Connect(function()
-	ClientAudio.SoundId = "http://www.roblox.com/asset/?id="..AudioId.Text
 	ClientAudio:Resume()
 	AudioId.Text = ""
 end)
