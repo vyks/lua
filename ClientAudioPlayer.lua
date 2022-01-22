@@ -54,6 +54,7 @@ local UICorner_3 = Instance.new("UICorner")
 ClientPlayerUI.Name = "ClientPlayerUI"
 ClientPlayerUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ClientPlayerUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ClientPlayerUI.ResetOnSpawn = false
 
 Body.Name = "Body"
 Body.Parent = ClientPlayerUI
