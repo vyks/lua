@@ -454,6 +454,7 @@ local function Muter() -- Mute.Muter
 			script.Parent.BorderColor3 = Color3.fromRGB(80, 220, 95)
 			script.Parent.Text = "Muted"
 			_G.Muted = true
+			print("muting")
 			repeat
 				for i,v in pairs(workspace:GetDescendants()) do
 					if v:IsA("Sound") then
@@ -461,7 +462,6 @@ local function Muter() -- Mute.Muter
 					end
 				end
 				wait(0.01)
-				print("muting")
 			until _G.Muted == false
 		elseif _G.Muted == true then
 			wait()
