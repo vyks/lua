@@ -18,6 +18,7 @@ game.StarterGui:SetCore('SendNotification',
 	}
 )
 end
+
 local ClientPlayerUI = Instance.new("ScreenGui")
 local Body = Instance.new("Frame")
 local FillerBody = Instance.new("Frame")
@@ -383,8 +384,8 @@ UICorner_3.CornerRadius = UDim.new(0, 100)
 UICorner_3.Parent = MyProfile
 UICorner_4.Parent = Body
 
-_G.Paused = false
-_G.Muted = false
+local Paused = false
+local Muted = false
 
 local ClientAudio = Instance.new("Sound")
 ClientAudio.Archivable = true 
@@ -396,7 +397,7 @@ ClientAudio.Name = "ClientAudio"
 game.StarterGui:SetCore('SendNotification',
 	{
 		Title = "Client Audio Player",
-		Text = "Successfully Loaded UI? - grifin",
+		Text = "Successfully loaded UI? - grifin",
 		Duration = 2,
 	}
 )
@@ -417,7 +418,7 @@ local function Pauser() -- PauseButton.Pauser
 	local script = Instance.new('LocalScript', PauseButton)
 	script.Parent.MouseButton1Down:Connect(function()
 		script.Parent.Parent.ClientAudio:Pause()
-		_G.Paused = true
+		Paused = true
 		script.Parent.Parent.PlayButton.Text = "Resume"
 	end)
 end
@@ -425,11 +426,11 @@ coroutine.wrap(Pauser)()
 local function Player() -- PlayButton.Player 
 	local script = Instance.new('LocalScript', PlayButton)
 	script.Parent.MouseButton1Down:Connect(function()
-		if _G.Paused == true then
+		if Paused == true then
 			script.Parent.Parent.ClientAudio:Resume()
-			_G.Paused = false
+			Paused = false
 			script.Parent.Parent.PlayButton.Text = "Play"
-		elseif _G.Paused == false then
+		elseif Paused == false then
 			script.Parent.Parent.ClientAudio.TimePosition = 0
 			script.Parent.Parent.ClientAudio:Play()
 			script.Parent.Parent.PlayButton.Text = "Play"
@@ -450,20 +451,20 @@ coroutine.wrap(Player)()
 local function Muter() -- Mute.Muter 
 	local script = Instance.new('LocalScript', Mute)
 	script.Parent.MouseButton1Down:Connect(function()
-		if _G.Muted == false then
+		if Muted == false then
 			script.Parent.BorderColor3 = Color3.fromRGB(80, 220, 95)
 			script.Parent.Text = "Muted"
-			_G.Muted = true
+			Muted = true
 			print("muting")
 			repeat
 				for i,v in pairs(workspace:GetDescendants()) do
 					if v:IsA("Sound") then
-						v.Pause:()
+						v.Playing = false
 					end
 				end
 				wait(0.01)
-			until _G.Muted == false
-		elseif _G.Muted == true then
+			until Muted == false
+		elseif Muted == true then
 			wait()
 		end
 	end)
@@ -472,22 +473,17 @@ coroutine.wrap(Muter)()
 local function Unmuter() -- Unmute.Unmuter 
 	local script = Instance.new('LocalScript', Unmute)
 	script.Parent.MouseButton1Down:Connect(function()
-		if _G.Muted == true then
+		if Muted == true then
 		script.Parent.Text = "Unmuted"
 		script.Parent.Parent.Mute.Text = "Mute"
 		script.Parent.Parent.Mute.BorderColor3 = Color3.fromRGB(164, 154, 230)
 		script.Parent.BorderColor3 = Color3.fromRGB(210, 60, 65)
-		_G.Muted = false
-		for i,v in pairs(workspace:GetDescendants()) do
-			if v:IsA("Sound") then
-				v:Resume()
-			end
-		end
+		Muted = false
 		print("unmuted")
 		wait(1)
 		script.Parent.Text = "Unmute"
 		script.Parent.BorderColor3 = Color3.fromRGB(164, 154, 230)
-		elseif _G.Muted == false then
+		elseif Muted == false then
 			wait()
 		end
 	end)
