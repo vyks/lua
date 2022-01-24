@@ -458,7 +458,7 @@ local function Muter() -- Mute.Muter
 			repeat
 				for i,v in pairs(workspace:GetDescendants()) do
 					if v:IsA("Sound") then
-						v.Playing = false
+						v.Pause:()
 					end
 				end
 				wait(0.01)
@@ -478,6 +478,11 @@ local function Unmuter() -- Unmute.Unmuter
 		script.Parent.Parent.Mute.BorderColor3 = Color3.fromRGB(164, 154, 230)
 		script.Parent.BorderColor3 = Color3.fromRGB(210, 60, 65)
 		_G.Muted = false
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("Sound") then
+				v:Resume()
+			end
+		end
 		print("unmuted")
 		wait(1)
 		script.Parent.Text = "Unmute"
