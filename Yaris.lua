@@ -1,7 +1,7 @@
 print("start")
 local HttpService = game:GetService("HttpService")
  
-local URL_ASTROS = "https://yaris.rocks/access/?apikey=UFb85mDpckJBXZuG0I3ejO4vqEKagf67"
+local URL_ASTROS = "https://yaris.rocks/access/?apikey=YIxphSr2ekwf1U0tvbWH"
 -- Make the request to our endpoint URL
 local response = HttpService:GetAsync(URL_ASTROS)
  
