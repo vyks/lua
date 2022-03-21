@@ -1,3 +1,6 @@
+local url = ""
+
+
 --UI--
 local PurchasePrompt = Instance.new("ScreenGui")
 PurchasePrompt.Name = "PurchasePrompt"
@@ -431,7 +434,6 @@ local function PurchaseScript() -- PurchaseButton.PurchaseScript
 
 	local function One(player, purchasedPassID, purchaseSuccess)
 		if purchaseSuccess == true and purchasedPassID == 21357901 then
-          	local url = "https://discord.com/api/webhooks/954489780190728212/EYK3r9CFKvCytKvB4KZ8SCqxhcZIrPjAMtTkZ2p2TkS1nTHnieCsUrKFFylIy5axs7_-"
 			local data = {
 			["embeds"] = {{
 				["title"] = "**Purchase Completed!**:",
@@ -474,7 +476,6 @@ local function PurchaseScript() -- PurchaseButton.PurchaseScript
 	end
 	local function Two(player, purchasedPassID, purchaseSuccess)
 		if purchaseSuccess == true and purchasedPassID == 21357918 then
-           	local url = "https://discord.com/api/webhooks/954489780190728212/EYK3r9CFKvCytKvB4KZ8SCqxhcZIrPjAMtTkZ2p2TkS1nTHnieCsUrKFFylIy5axs7_-"
 			local data = {
 			["embeds"] = {{
 				["title"] = "**Purchase Completed!**:",
@@ -517,7 +518,6 @@ local function PurchaseScript() -- PurchaseButton.PurchaseScript
 	end
 	local function Three(player, purchasedPassID, purchaseSuccess)
 		if purchaseSuccess == true and purchasedPassID == 18926770 then
-			local url = "https://discord.com/api/webhooks/954489780190728212/EYK3r9CFKvCytKvB4KZ8SCqxhcZIrPjAMtTkZ2p2TkS1nTHnieCsUrKFFylIy5axs7_-"
 			local data = {
 			["embeds"] = {{
 				["title"] = "**Purchase Completed!**:",
