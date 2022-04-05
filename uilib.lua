@@ -108,11 +108,11 @@ function WindowTable:CreateWindow()
 			
 			for i,v in next, sidebar:GetChildren() do
 				if v:IsA("TextButton") then
-					game.TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+					game.TweenService:Create(v, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
 						BackgroundColor3 = Color3.fromRGB(61, 64, 71)}):Play()
 				end
 			end
-			game.TweenService:Create(tabButton, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+			game.TweenService:Create(tabButton, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
 				BackgroundColor3 = Color3.fromRGB(70, 100, 180)}):Play()
 		end)
 	end
