@@ -99,19 +99,20 @@ function WindowTable:CreateWindow()
 		UiListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UiListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		UiListLayout.Padding = UDim.new(0, 5)
-		
-		for i,v in next, PagesFolder:GetChildren() do
-			v.Visble = false
-		end
-		NewPage.Visible = true
-		for i,v in next, sidebar:GetChildren() do
-			if v:IsA("TextButton") then
-				game.TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
-					BackgroundColor3 = Color3.fromRGB(155, 109, 83)}):Play()
+		TextButton.MouseButton1Down:Connect(function()
+			for i,v in next, PagesFolder:GetChildren() do
+				v.Visble = false
 			end
-		end
-		game.TweenService:Create(TextButton, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
-			BackgroundColor3 = Color3.fromRGB(255, 109, 83)}):Play()
+			NewPage.Visible = true
+			for i,v in next, sidebar:GetChildren() do
+				if v:IsA("TextButton") then
+					game.TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+						BackgroundColor3 = Color3.fromRGB(155, 109, 83)}):Play()
+				end
+			end
+			game.TweenService:Create(TextButton, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+				BackgroundColor3 = Color3.fromRGB(255, 109, 83)}):Play()
+		end)
 	end
 	return TabHandler
 end
