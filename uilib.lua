@@ -75,15 +75,15 @@ function WindowTable:CreateWindow()
 	function TabHandler:CreateTab(tabname)
 		
 		tabname = tabname or "New Tab"
-		local newTab = Instance.new("TextButton")
-		newTab.Parent = sidebar
-		newTab.BackgroundColor3 = Color3.fromRGB(61, 64, 71)
-		newTab.BorderColor3 = Color3.fromRGB(216, 222, 233)
-		newTab.Size = UDim2.new(0, 75, 0, 30)
-		newTab.Font = Enum.Font.Gotham
-		newTab.Text = tabname
-		newTab.TextColor3 = Color3.fromRGB(216, 222, 233)
-		newTab.TextSize = 12.000
+		local tabButton = Instance.new("TextButton")
+		tabButton.Parent = sidebar
+		tabButton.BackgroundColor3 = Color3.fromRGB(61, 64, 71)
+		tabButton.BorderColor3 = Color3.fromRGB(216, 222, 233)
+		tabButton.Size = UDim2.new(0, 75, 0, 30)
+		tabButton.Font = Enum.Font.Gotham
+		tabButton.Text = tabname
+		tabButton.TextColor3 = Color3.fromRGB(216, 222, 233)
+		tabButton.TextSize = 12.000
 		local NewPage = Instance.new("ScrollingFrame")
 		NewPage.Name = "NewPage"
 		NewPage.Parent = PagesFolder
@@ -99,18 +99,20 @@ function WindowTable:CreateWindow()
 		UiListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UiListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		UiListLayout.Padding = UDim.new(0, 5)
-		newTab.MouseButton1Down:Connect(function()
+		
+		tabButton.MouseButton1Down:Connect(function()
 			for i,v in next, PagesFolder:GetChildren() do
 				v.Visble = false
 			end
 			NewPage.Visible = true
+			
 			for i,v in next, sidebar:GetChildren() do
 				if v:IsA("TextButton") then
 					game.TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
 						BackgroundColor3 = Color3.fromRGB(155, 109, 83)}):Play()
 				end
 			end
-			game.TweenService:Create(newTab, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
+			game.TweenService:Create(tabButton, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
 				BackgroundColor3 = Color3.fromRGB(255, 109, 83)}):Play()
 		end)
 	end
