@@ -102,7 +102,7 @@ function WindowTable:CreateWindow()
 		
 		tabButton.MouseButton1Down:Connect(function()
 			for i,v in next, PagesFolder:GetChildren() do
-				v.Visble = false
+				v.Visible = false
 			end
 			NewPage.Visible = true
 			
