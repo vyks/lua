@@ -113,7 +113,7 @@ function WindowTable:CreateWindow()
 				end
 			end
 			game.TweenService:Create(tabButton, TweenInfo.new(0.2, Enum.EasingStyle.Sine, Enum.EasingDirection.In), {
-				BackgroundColor3 = Color3.fromRGB(141, 144, 151)}):Play()
+				BackgroundColor3 = Color3.fromRGB(70, 100, 180)}):Play()
 		end)
 	end
 	return TabHandler
